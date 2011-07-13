@@ -1,0 +1,647 @@
+# depslib dependency file v1.0
+1310406573 source:c:\programming\gametemplate\gameengine.cpp
+	"GameEngine.h"
+
+1255940894 e.h"
+
+1310405622 c:\programming\gametemplate\gameengine.h
+	"AbstractGameState.h"
+
+1310406254 ameState.h"
+
+1310406555 c:\programming\gametemplate\abstractgamestate.h
+	<string>
+	<sstream>
+	<SDL.h>
+	<SDL_ttf.h>
+
+1310406555 >
+
+1255800450 c:\sdl\include\sdl.h
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_audio.h"
+	"SDL_cdrom.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_loadso.h"
+	"SDL_mutex.h"
+	"SDL_rwops.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_video.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\sdl\include\sdl_main.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\sdl\include\sdl_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<iconv.h>
+	"begin_code.h"
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	"close_code.h"
+
+1255800464 c:\sdl\include\sdl_config.h
+	"SDL_platform.h"
+	<stdarg.h>
+
+1310406529 
+
+1255800450 c:\sdl\include\sdl_platform.h
+
+1255800450 c:\sdl\include\begin_code.h
+
+1255800450 c:\sdl\include\close_code.h
+
+1255800450 c:\sdl\include\sdl_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\sdl\include\sdl_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\sdl\include\sdl_endian.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\sdl\include\sdl_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\sdl\include\sdl_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_mutex.h"
+	"begin_code.h"
+	<process.h>
+	"close_code.h"
+
+1255800450 c:\sdl\include\sdl_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\sdl\include\sdl_cdrom.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\sdl\include\sdl_cpuinfo.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\sdl\include\sdl_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_active.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_quit.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\sdl\include\sdl_active.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\sdl\include\sdl_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keysym.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\sdl\include\sdl_keysym.h
+
+1255800450 c:\sdl\include\sdl_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\sdl\include\sdl_video.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\sdl\include\sdl_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\sdl\include\sdl_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1255800450 .h"
+
+1255800450 c:\sdl\include\sdl_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\sdl\include\sdl_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\sdl\include\sdl_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255940894 c:\sdl\include\sdl_ttf.h
+	"SDL.h"
+	"begin_code.h"
+	"close_code.h"
+
+1310406529 source:c:\programming\gametemplate\main.cpp
+	"GameEngine.h"
+	<time.h>
+
+1310406254 source:c:\programming\gametemplate\abstractgamestate.cpp
+	"AbstractGameState.h"
+
+1310437288 source:/home/chris/My-SDL-Base/AbstractGameState.cpp
+	"AbstractGameState.h"
+
+1310437462 /home/chris/My-SDL-Base/AbstractGameState.h
+	<string>
+	<sstream>
+	<SDL/SDL.h>
+	<SDL/SDL_ttf.h>
+
+1310445375 source:/home/chris/My-SDL-Base/Draw.cpp
+	"Draw.h"
+
+1310445375 /home/chris/My-SDL-Base/Draw.h
+	<SDL/SDL.h>
+	<SDL/SDL_ttf.h>
+	<SDL/SDL_gfxPrimitives.h>
+	<string>
+	"Setting.h"
+
+1310437288 /home/chris/My-SDL-Base/Setting.h
+	<string>
+
+1310442808 source:/home/chris/My-SDL-Base/GameEngine.cpp
+	"GameEngine.h"
+
+1310437288 /home/chris/My-SDL-Base/GameEngine.h
+	"AbstractGameState.h"
+
+1310445074 source:/home/chris/My-SDL-Base/IntroState.cpp
+	"IntroState.h"
+	"GameState.h"
+	<iostream>
+
+1310442255 /home/chris/My-SDL-Base/IntroState.h
+	"AbstractGameState.h"
+	"GameEngine.h"
+	"Draw.h"
+
+1310439039 source:/home/chris/My-SDL-Base/Setting.cpp
+	"Setting.h"
+
+1310441398 source:/home/chris/My-SDL-Base/main.cpp
+	<time.h>
+	"GameEngine.h"
+	"IntroState.h"
+
+1310445027 source:/home/chris/My-SDL-Base/GameState.cpp
+	"GameState.h"
+	<iostream>
+
+1310444832 /home/chris/My-SDL-Base/GameState.h
+	<SDL/SDL_gfxPrimitives.h>
+	"AbstractGameState.h"
+	"GameEngine.h"
+	"Draw.h"
+
+1310484878 source:/home/chris/GameTemplate/AbstractGameState.cpp
+	"AbstractGameState.h"
+
+1310501644 /home/chris/GameTemplate/AbstractGameState.h
+	<string>
+	<sstream>
+	<SDL.h>
+	<SDL_ttf.h>
+	<SDL/SDL.h>
+	<SDL/SDL_ttf.h>
+
+1278057020 /usr/include/SDL/SDL.h
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_audio.h"
+	"SDL_cdrom.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_loadso.h"
+	"SDL_mutex.h"
+	"SDL_rwops.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_video.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1278057020 /usr/include/SDL/SDL_main.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+	"begin_code.h"
+	"close_code.h"
+
+1278057020 /usr/include/SDL/SDL_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<iconv.h>
+	"begin_code.h"
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	"close_code.h"
+
+1278057020 /usr/include/SDL/SDL_config.h
+	"SDL_platform.h"
+	<stdarg.h>
+
+1278057020 /usr/include/SDL/SDL_platform.h
+
+1278057020 /usr/include/SDL/begin_code.h
+
+1278057020 /usr/include/SDL/close_code.h
+
+1278057020 /usr/include/SDL/SDL_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1278057020 /usr/include/SDL/SDL_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1278057020 /usr/include/SDL/SDL_endian.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1278057020 /usr/include/SDL/SDL_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1278057020 /usr/include/SDL/SDL_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_mutex.h"
+	"begin_code.h"
+	<process.h>
+	"close_code.h"
+
+1278057020 /usr/include/SDL/SDL_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1278057020 /usr/include/SDL/SDL_cdrom.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1278057020 /usr/include/SDL/SDL_cpuinfo.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1278057020 /usr/include/SDL/SDL_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_active.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_quit.h"
+	"begin_code.h"
+	"close_code.h"
+
+1278057020 /usr/include/SDL/SDL_active.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1278057020 /usr/include/SDL/SDL_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keysym.h"
+	"begin_code.h"
+	"close_code.h"
+
+1278057020 /usr/include/SDL/SDL_keysym.h
+
+1278057020 /usr/include/SDL/SDL_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1278057020 /usr/include/SDL/SDL_video.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1278057020 /usr/include/SDL/SDL_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1278057020 /usr/include/SDL/SDL_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1278057020 /usr/include/SDL/SDL_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1278057020 /usr/include/SDL/SDL_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1278057020 /usr/include/SDL/SDL_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1242077228 /usr/include/SDL/SDL_ttf.h
+	"SDL.h"
+	"begin_code.h"
+	"close_code.h"
+
+1310501692 source:/home/chris/GameTemplate/Animation.cpp
+	"Animation.h"
+
+1310501706 /home/chris/GameTemplate/Animation.h
+	<SDL.h>
+	<SDL/SDL.h>
+
+1310492566 source:/home/chris/GameTemplate/Camera.cpp
+	"Camera.h"
+
+1310492388 /home/chris/GameTemplate/Camera.h
+	<SDL.h>
+
+1310508614 source:/home/chris/GameTemplate/Draw.cpp
+	"Draw.h"
+
+1310506726 /home/chris/GameTemplate/Draw.h
+	<string>
+	<SDL.h>
+	<SDL_ttf.h>
+	<SDL_image.h>
+	<SDL_gfxPrimitives.h>
+	<SDL/SDL.h>
+	<SDL/SDL_ttf.h>
+	<SDL/SDL_image.h>
+	<SDL/SDL_gfxPrimitives.h>
+	"Setting.h"
+
+1273659171 /usr/include/SDL/SDL_image.h
+	"SDL.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1258509047 /usr/include/SDL/SDL_gfxPrimitives.h
+	<math.h>
+	"SDL.h"
+
+1310484878 /home/chris/GameTemplate/Setting.h
+	<string>
+
+1310509654 source:/home/chris/GameTemplate/Entity.cpp
+	"Entity.h"
+
+1310509626 /home/chris/GameTemplate/Entity.h
+	<vector>
+	<string>
+	"Animation.h"
+	"Camera.h"
+	"Draw.h"
+
+1310506040 source:/home/chris/GameTemplate/GameEngine.cpp
+	"GameEngine.h"
+
+1310506684 /home/chris/GameTemplate/GameEngine.h
+	<SDL_image.h>
+	<SDL/SDL_image.h>
+	"AbstractGameState.h"
+
+1310526470 source:/home/chris/GameTemplate/GameState.cpp
+	"GameState.h"
+	<iostream>
+	<stdio.h>
+
+1310526472 /home/chris/GameTemplate/GameState.h
+	"AbstractGameState.h"
+	"GameEngine.h"
+	"Draw.h"
+
+1310504174 source:/home/chris/GameTemplate/IntroState.cpp
+	<iostream>
+	"IntroState.h"
+	"GameState.h"
+
+1310484878 /home/chris/GameTemplate/IntroState.h
+	"AbstractGameState.h"
+	"GameEngine.h"
+	"Draw.h"
+
+1310504086 source:/home/chris/GameTemplate/Setting.cpp
+	"Setting.h"
+
+1310492196 source:/home/chris/GameTemplate/Tile.cpp
+	"Tile.h"
+
+1310492198 /home/chris/GameTemplate/Tile.h
+
+1310484878 source:/home/chris/GameTemplate/main.cpp
+	<time.h>
+	"GameEngine.h"
+	"IntroState.h"
+
+1310484878 source:/home/chris/Breakout/AbstractGameState.cpp
+	"AbstractGameState.h"
+
+1310501644 /home/chris/Breakout/AbstractGameState.h
+	<string>
+	<sstream>
+	<SDL.h>
+	<SDL_ttf.h>
+	<SDL/SDL.h>
+	<SDL/SDL_ttf.h>
+
+1310501692 source:/home/chris/Breakout/Animation.cpp
+	"Animation.h"
+
+1310501706 /home/chris/Breakout/Animation.h
+	<SDL.h>
+	<SDL/SDL.h>
+
+1310492566 source:/home/chris/Breakout/Camera.cpp
+	"Camera.h"
+
+1310492388 /home/chris/Breakout/Camera.h
+	<SDL.h>
+
+1310508614 source:/home/chris/Breakout/Draw.cpp
+	"Draw.h"
+
+1310506726 /home/chris/Breakout/Draw.h
+	<string>
+	<SDL.h>
+	<SDL_ttf.h>
+	<SDL_image.h>
+	<SDL_gfxPrimitives.h>
+	<SDL/SDL.h>
+	<SDL/SDL_ttf.h>
+	<SDL/SDL_image.h>
+	<SDL/SDL_gfxPrimitives.h>
+	"Setting.h"
+
+1310484878 /home/chris/Breakout/Setting.h
+	<string>
+
+1310509654 source:/home/chris/Breakout/Entity.cpp
+	"Entity.h"
+
+1310509626 /home/chris/Breakout/Entity.h
+	<vector>
+	<string>
+	"Animation.h"
+	"Camera.h"
+	"Draw.h"
+
+1310506040 source:/home/chris/Breakout/GameEngine.cpp
+	"GameEngine.h"
+
+1310506684 /home/chris/Breakout/GameEngine.h
+	<SDL_image.h>
+	<SDL/SDL_image.h>
+	"AbstractGameState.h"
+
+1310504174 source:/home/chris/Breakout/IntroState.cpp
+	<iostream>
+	"IntroState.h"
+	"GameState.h"
+
+1310484878 /home/chris/Breakout/IntroState.h
+	"AbstractGameState.h"
+	"GameEngine.h"
+	"Draw.h"
+
+1310526472 /home/chris/Breakout/GameState.h
+	"AbstractGameState.h"
+	"GameEngine.h"
+	"Draw.h"
+
+1310504086 source:/home/chris/Breakout/Setting.cpp
+	"Setting.h"
+
+1310492196 source:/home/chris/Breakout/Tile.cpp
+	"Tile.h"
+
+1310492198 /home/chris/Breakout/Tile.h
+
+1310484878 source:/home/chris/Breakout/main.cpp
+	<time.h>
+	"GameEngine.h"
+	"IntroState.h"
+
