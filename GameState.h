@@ -4,7 +4,7 @@
 #include "AbstractGameState.h"
 #include "GameEngine.h"
 #include "Draw.h"
-
+#include "Ball.h"
 
 class GameState: public AbstractGameState {
 public:
@@ -20,7 +20,7 @@ private:
     int score;
     int lives;
     SDL_Surface* balls;
-;
+    Ball* ball;
 };
 
 

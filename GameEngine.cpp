@@ -90,6 +90,9 @@ void GameEngine::loop() {
                 case SDL_KEYDOWN:
                     this->state->keyPressed(event.key.keysym.sym);
                     break;
+                case SDL_KEYUP:
+                    this->state->keyReleased(event.key.keysym.sym);
+                    break;
 
         }
     }

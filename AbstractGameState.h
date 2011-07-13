@@ -20,6 +20,8 @@ public:
     virtual void clockTick();
     virtual void draw(SDL_Surface* surface);
     virtual void keyPressed(SDLKey key);
+    virtual void keyReleased(SDLKey key);
+
     /**
     * Convert Int to String.
     */

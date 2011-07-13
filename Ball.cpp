@@ -1,13 +1,17 @@
 
-
+#include <iostream>
 #include "Ball.h"
 #include <math.h>
+
+using namespace std;
 
 Ball::Ball() {
     load("data/balls.bmp", 12, 12, 5);
     Draw::setTransparent(this->entitySurf, 0, 0, 0);
-    this->speed = 0.7;
-    this->direction = M_PI/3;
+    this->launched = true;
+    this->dead = false;
+    this->speed = 7;
+    this->direction = random() * 2.*M_PI / (double)RAND_MAX;
     cleanup();
 }
 
@@ -19,16 +23,34 @@ void Ball::tick() {
     int newX = this->x + this->speed * cos(this->direction);
     int newY = this->y - this->speed * sin(this->direction);
 
-    if(newX < 0 or newX > 320) {
+    if(newX < 5 || newX > 303) {
         this->direction = M_PI - this->direction;
+        if (newX > 303) {
+            this->direction += .2;
+            this->x = 303;
+        } else if (newX < 5) {
+            this->direction -= .2;
+            this->x = 5;
+        }
+
     } else {
         this->x = newX;
     }
 
     if(newY < 0) {
-        this->direction = -this->direction;
+        this->direction = -this->direction + .2;
+        this->y = 0;
     } else {
         this->y = newY;
+    }
+
+    if (newY > 240) {
+        this->dead = true;
+    }
+    // Protection for sideways.
+    if (this->direction == 0 || this->direction == M_PI || this->direction == 2*M_PI) {
+        cout << "Noooooooo" <<endl;
+        this->direction = random() * 2.*M_PI / (double)RAND_MAX;
     }
 }
 
@@ -37,7 +59,7 @@ void Ball::render(SDL_Surface* display) {
 }
 
 void Ball::cleanup() {
-    x=25;
+    x=250;
     y=25;
 }
 

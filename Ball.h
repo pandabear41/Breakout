@@ -18,6 +18,9 @@ struct ColliderData {
 
 class Ball: public Entity {
     public:
+        bool launched;
+        double speed;
+        double direction;
         Ball();
         ~Ball();
         void tick();
@@ -26,10 +29,6 @@ class Ball: public Entity {
 		void collision(Entity* entity);
         bool circle2Rectangle(Entity* entity, ColliderData* data);
     private:
-        double speed;
-        double direction;
-
-
 };
 
 #endif // BALL_H_INCLUDED

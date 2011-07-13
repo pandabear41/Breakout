@@ -557,10 +557,10 @@
 	"GameEngine.h"
 	"IntroState.h"
 
-1310484878 source:/home/chris/Breakout/AbstractGameState.cpp
+1310529756 source:/home/chris/Breakout/AbstractGameState.cpp
 	"AbstractGameState.h"
 
-1310501644 /home/chris/Breakout/AbstractGameState.h
+1310529766 /home/chris/Breakout/AbstractGameState.h
 	<string>
 	<sstream>
 	<SDL.h>
@@ -599,17 +599,17 @@
 1310484878 /home/chris/Breakout/Setting.h
 	<string>
 
-1310509654 source:/home/chris/Breakout/Entity.cpp
+1310529297 source:/home/chris/Breakout/Entity.cpp
 	"Entity.h"
 
-1310509626 /home/chris/Breakout/Entity.h
+1310529297 /home/chris/Breakout/Entity.h
 	<vector>
 	<string>
 	"Animation.h"
 	"Camera.h"
 	"Draw.h"
 
-1310506040 source:/home/chris/Breakout/GameEngine.cpp
+1310529757 source:/home/chris/Breakout/GameEngine.cpp
 	"GameEngine.h"
 
 1310506684 /home/chris/Breakout/GameEngine.h
@@ -627,12 +627,13 @@
 	"GameEngine.h"
 	"Draw.h"
 
-1310526472 /home/chris/Breakout/GameState.h
+1310526983 /home/chris/Breakout/GameState.h
 	"AbstractGameState.h"
 	"GameEngine.h"
 	"Draw.h"
+	"Ball.h"
 
-1310504086 source:/home/chris/Breakout/Setting.cpp
+1310527167 source:/home/chris/Breakout/Setting.cpp
 	"Setting.h"
 
 1310492196 source:/home/chris/Breakout/Tile.cpp
@@ -640,8 +641,27 @@
 
 1310492198 /home/chris/Breakout/Tile.h
 
-1310484878 source:/home/chris/Breakout/main.cpp
+1310528461 source:/home/chris/Breakout/main.cpp
 	<time.h>
 	"GameEngine.h"
 	"IntroState.h"
+
+1310530532 source:/home/chris/Breakout/Ball.cpp
+	<iostream>
+	"Ball.h"
+	<math.h>
+
+1310530755 /home/chris/Breakout/Ball.h
+	"Entity.h"
+
+1310529922 source:/home/chris/Breakout/GameState.cpp
+	"GameState.h"
+	<iostream>
+	<stdio.h>
+
+1310530763 source:/home/chris/Breakout/Paddle.cpp
+	"Paddle.h"
+
+1310530755 /home/chris/Breakout/Paddle.h
+	"Entity.h"
 

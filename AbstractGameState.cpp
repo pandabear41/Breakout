@@ -21,6 +21,9 @@ void AbstractGameState::draw(SDL_Surface* surface) {
 void AbstractGameState::keyPressed(SDLKey key) {
 }
 
+void AbstractGameState::keyReleased(SDLKey key) {
+}
+
 /**
 * Convert Int to String.
 */

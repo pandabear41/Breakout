@@ -25,7 +25,20 @@ GameState::~GameState() {
 void GameState::clockTick() {
     tickCount++;
     this->score++;
-    this->ball->tick();
+    if (this->ball->dead == false && this->ball->launched == true ) {
+        this->ball->tick();
+    } else if (this->ball->dead == true) {
+        this->ball->dead = false;
+        this->ball->launched = false;
+        this->lives--;
+        if (this->lives < 0) {
+            // Gameover.
+        }
+        this->ball->cleanup();
+    } else {
+
+    }
+
     this->reDraw = true;
 }
 
@@ -62,5 +75,14 @@ void GameState::draw(SDL_Surface* surface) {
 }
 
 void GameState::keyPressed(SDLKey key) {
+    switch (key) {
+        case SDLK_g:
+            if (this->ball->launched == false) {
+                this->ball->direction = random() * 2.*M_PI / (double)RAND_MAX;
+                this->ball->launched = true;
+            }
+        default:
+            break;
+    }
 
 }

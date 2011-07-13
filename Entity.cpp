@@ -13,6 +13,7 @@ Entity::Entity() {
 
 	type = ENTITY_TYPE_GENERIC;
 	flags = ENTITY_FLAG_NONE;
+    dead = false;
 
 	speedX = 0;
 	speedY = 0;

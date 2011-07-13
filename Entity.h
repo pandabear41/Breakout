@@ -29,6 +29,7 @@ class Entity {
 		int	height;
 
 		int	type;
+		bool dead;
 		int	flags;
 		float maxSpeedX;
 		float maxSpeedY;
