@@ -33,28 +33,40 @@
 			<Add option="`sdl-config --cflags`" />
 		</Compiler>
 		<Linker>
-			<Add option="-lSDL -lSDL_ttf" />
+			<Add option="-lSDL -lSDL_ttf -lSDL_image" />
 		</Linker>
 		<Unit filename="AbstractGameState.cpp" />
 		<Unit filename="AbstractGameState.h" />
 		<Unit filename="Animation.cpp" />
 		<Unit filename="Animation.h" />
+		<Unit filename="Ball.cpp" />
+		<Unit filename="Ball.h" />
+		<Unit filename="Brick.cpp" />
+		<Unit filename="Brick.h" />
 		<Unit filename="Camera.cpp" />
 		<Unit filename="Camera.h" />
+		<Unit filename="Defines.h" />
 		<Unit filename="Draw.cpp" />
 		<Unit filename="Draw.h" />
 		<Unit filename="Entity.cpp" />
 		<Unit filename="Entity.h" />
 		<Unit filename="GameEngine.cpp" />
 		<Unit filename="GameEngine.h" />
+		<Unit filename="GameMap.cpp" />
+		<Unit filename="GameMap.h" />
 		<Unit filename="GameState.cpp" />
 		<Unit filename="GameState.h" />
 		<Unit filename="IntroState.cpp" />
 		<Unit filename="IntroState.h" />
+		<Unit filename="MenuState.cpp" />
+		<Unit filename="MenuState.h" />
+		<Unit filename="Paddle.cpp" />
+		<Unit filename="Paddle.h" />
 		<Unit filename="Setting.cpp" />
 		<Unit filename="Setting.h" />
 		<Unit filename="Tile.cpp" />
 		<Unit filename="Tile.h" />
+		<Unit filename="Vector2d.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

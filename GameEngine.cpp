@@ -33,6 +33,7 @@ GameEngine::GameEngine(const int width, const int height, const bool fullscreen)
 
     this->state = NULL;
     this->tickInterval = 20;
+    this->renderInterval = 20;
 }
 
 GameEngine::~GameEngine() {
@@ -56,18 +57,24 @@ void GameEngine::setTickInterval(int interval) {
     this->tickInterval = interval;
 }
 
+void GameEngine::setRenderInterval(int interval) {
+    this->renderInterval = interval;
+}
+
 /**
 * Run the game
 */
 void GameEngine::loop() {
     SDL_Event event;
     Uint32 nextTick;
+    Uint32 nextRender;
 
     if (NULL == this->state) {
         return;
     }
 
     this->done = false;
+    nextRender = SDL_GetTicks() + this->renderInterval;
     while (!this->done) {
         nextTick = SDL_GetTicks() + this->tickInterval;
 
@@ -86,23 +93,26 @@ void GameEngine::loop() {
                 case SDL_QUIT:
                     this->done = true;
                     break;
-
                 case SDL_KEYDOWN:
                     this->state->keyPressed(event.key.keysym.sym);
                     break;
                 case SDL_KEYUP:
                     this->state->keyReleased(event.key.keysym.sym);
                     break;
-
         }
     }
 
     // Game tick
     this->state->clockTick();
-    // Redraw screen
-    this->state->draw(screen);
-    // print out to screen
-    SDL_Flip(screen);
+
+    if (!(SDL_GetTicks() < nextRender)) {
+        nextRender = SDL_GetTicks() + this->renderInterval;
+        // Redraw screen
+        this->state->draw(screen);
+        // print out to screen
+        SDL_Flip(screen);
+    }
+
 
     // if state have set a state inside state, change state.
     if (NULL != this->state->state) {

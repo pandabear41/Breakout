@@ -1,34 +1,38 @@
 #ifndef BALL_H_INCLUDED
 #define BALL_H_INCLUDED
 
-
-typedef struct SDL_Point {
-  int x;
-  int y;
-} SDL_Point;
-
 #include "Entity.h"
-
-struct ColliderData {
-  int config;
-  int x,y;
-  Entity *from_object;
-};
-
+#include "Vector2d.h"
+#include "Paddle.h"
+#include <set>
+#include <stack>
+#include <algorithm>
+#include <cmath>
 
 class Ball: public Entity {
     public:
+        bool stop;
         bool launched;
-        double speed;
-        double direction;
+        Paddle* paddle;
+        float dX;
+		float dY;
+		float lastY;
         Ball();
         ~Ball();
         void tick();
 		void render(SDL_Surface* display);
 		void cleanup();
-		void collision(Entity* entity);
-        bool circle2Rectangle(Entity* entity, ColliderData* data);
+		bool collision(Entity* entity);
+
+
+        void bounceX();
+        void bounceY();
+
     private:
+        float randF(float min, float max);
+        float randI(int min, int max);
+        float randSS(float num);
+
 };
 
 #endif // BALL_H_INCLUDED

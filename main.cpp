@@ -4,6 +4,7 @@
 #include "IntroState.h"
 
 
+
 using namespace std;
 
 int main(int argc, char **argv) {
@@ -17,6 +18,7 @@ int main(int argc, char **argv) {
     AbstractGameState* state = new IntroState();
     engine->setState(state);
     engine->setTickInterval(30);
+    engine->setRenderInterval(30);
 
     // Keep alive
     engine->loop();

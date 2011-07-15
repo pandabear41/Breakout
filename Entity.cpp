@@ -71,7 +71,7 @@ void Entity::animate() {
 	animControl.onTick();
 }
 
-void Entity::collision(Entity* entity) {
+bool Entity::collision(Entity* entity) {
 }
 
 void Entity::move(float moveX, float moveY) {
@@ -87,6 +87,11 @@ void Entity::stopMove() {
 	speedY = 0;
 	accelY = 0;
 }
+
+bool Entity::collides(Entity* object) {
+    return this->collides(object->x, object->y, object->width, object->height);
+}
+
 
 bool Entity::collides(int oX, int oY, int oW, int oH) {
     int left1, left2;
@@ -118,4 +123,85 @@ bool Entity::collides(int oX, int oY, int oW, int oH) {
 
     return true;
 }
+
+
+bool Entity::circle2Rectangle(int x, int y, Entity* entity, ColliderData* data) {
+    int radius = 6;
+      int cx = x+radius;
+      int cy = y+radius;
+      int x1 = entity->x;
+      int y1 = entity->y;
+      int x2 = x1+entity->width;
+      int y2 = y1+entity->height;
+      int xmid = x2 - static_cast<int>((double)entity->width/2.);
+      int ymid = y2 - static_cast<int>((double)entity->height/2.);
+      int config = -1;
+
+      // Check for edge collision
+      if ((x1<=cx) && (cx<x2)) {
+        if ((cy>=y1-radius) && (cy<ymid)) {//y1)) {
+          config = 1;
+        }
+        else if ((cy<=y2+radius) && (cy>ymid)) {//y2)) {
+          config = 5;
+        }
+      }
+      else if ((y1<=cy) && (cy<y2)) {
+        if ((cx>=x1-radius) && (cx<xmid)) {//x1)){
+          config = 7;
+        }
+        else if ((cx<=x2+radius) && (cx>xmid)) {//x2)) {
+          config = 3;
+        }
+      }
+      // Check for corner collision
+      if (config == -1) {
+        SDL_Point corner = {-1,-1};
+        int potential_config = -1;
+
+        if (cx<x1) {
+          if (cy<y1) {
+            corner.x = x1;
+            corner.y = y1;
+            data->impact_vector.set(
+              x1 - cx, y1 - cy
+            );
+            potential_config = 0;
+          }
+          else if (cy>y2) {
+            corner.x = x1;
+            corner.y = y2;
+            data->impact_vector.set(
+              x1 - cx, y2 - cy
+            );
+            potential_config = 6;
+          }
+        }
+        else if (cx>x2) {
+          if (cy<y1) {
+            corner.x = x2;
+            corner.y = y1;
+            data->impact_vector.set(
+              x2 - cx, y1 - cy
+            );
+            potential_config = 2;
+          }
+          else if (cy>y2) {
+            corner.x = x2;
+            corner.y = y2;
+            data->impact_vector.set(
+              x2 - cx, y2 - cy
+            );
+            potential_config = 4;
+          }
+        }
+        if ((cx-corner.x)*(cx-corner.x) + (cy-corner.y)*(cy-corner.y)
+              < radius*radius) {
+              config = potential_config;
+        }
+      }
+      data->config = config;
+      return config != -1;
+}
+
 

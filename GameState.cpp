@@ -1,8 +1,11 @@
 #include "GameState.h"
 #include <iostream>
 #include <stdio.h>
+#include <cstdlib>
 
 using namespace std;
+
+SDL_Surface* bricksResource;
 
 GameState::GameState() {
     this->tickCount = 0;
@@ -15,6 +18,16 @@ GameState::GameState() {
 
     this->ball = new Ball();
 
+    this->paddle = new Paddle();
+    this->ball->paddle = this->paddle;
+
+    this->bricksResourceS = Draw::loadBMP("data/bricks_small.bmp");
+    this->bricksResourceL = Draw::loadBMP("data/bricks.bmp");
+
+    this->gMap = new GameMap(MAP_TYPE_LARGE);
+    this->gMap->lImg = this->bricksResourceL;
+    this->gMap->sImg = this->bricksResourceS;
+    this->gMap->generateNew();
 }
 
 GameState::~GameState() {
@@ -23,10 +36,16 @@ GameState::~GameState() {
 }
 
 void GameState::clockTick() {
+
     tickCount++;
     this->score++;
+    // update Paddle
+    this->paddle->tick();
+    this->gMap->tick();
+    // Update ball
     if (this->ball->dead == false && this->ball->launched == true ) {
         this->ball->tick();
+        this->gMap->collidesWith(this->ball);
     } else if (this->ball->dead == true) {
         this->ball->dead = false;
         this->ball->launched = false;
@@ -35,10 +54,10 @@ void GameState::clockTick() {
             // Gameover.
         }
         this->ball->cleanup();
-    } else {
-
+    } else if (this->ball->launched == false) {
+        this->ball->x = this->paddle->x + ((this->paddle->width / 2) - (this->ball->width / 2));
+        this->ball->y = this->paddle->y - this->ball->height - 1;
     }
-
     this->reDraw = true;
 }
 
@@ -60,6 +79,10 @@ void GameState::draw(SDL_Surface* surface) {
     Draw::filledRect(surface, 0, 0, 5, 240, 0xC0C0C0);
     Draw::filledRect(surface, 315, 0, 5, 240, 0xC0C0C0);
 
+    this->gMap->render(surface);
+    this->ball->render(surface);
+    this->paddle->render(surface);
+
     // Draw Score.
     char buffer[15];
     sprintf(buffer,"%d",this->score);
@@ -71,18 +94,38 @@ void GameState::draw(SDL_Surface* surface) {
         xB-=14;
     }
 
-    this->ball->render(surface);
 }
 
 void GameState::keyPressed(SDLKey key) {
     switch (key) {
         case SDLK_g:
             if (this->ball->launched == false) {
-                this->ball->direction = random() * 2.*M_PI / (double)RAND_MAX;
+                this->ball->cleanup();
                 this->ball->launched = true;
             }
+            break;
+        case SDLK_LEFT:
+            this->paddle->keyDown(1);
+            break;
+        case SDLK_RIGHT:
+            this->paddle->keyDown(2);
+            break;
         default:
             break;
     }
 
+}
+
+void GameState::keyReleased(SDLKey key) {
+    switch (key) {
+        case SDLK_LEFT:
+            this->paddle->keyUp(1);
+            break;
+        case SDLK_RIGHT:
+            this->paddle->keyUp(2);
+            break;
+        default:
+            this->ball->stop = false;
+            break;
+    }
 }

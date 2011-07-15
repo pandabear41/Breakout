@@ -26,6 +26,11 @@ public:
     * TickInterval is 1000 / tick = FPS (frame per second)
     */
     void setTickInterval(int interval);
+
+    /**
+    * TickInterval is 1000 / tick = FPS (frame per second)
+    */
+    void setRenderInterval(int interval);
     /**
     * Run the game
     */
@@ -36,6 +41,7 @@ private:
     SDL_Surface* screen;
     bool done;
     int tickInterval;
+    int renderInterval;
 };
 
 #endif // GAMEENGINE_H

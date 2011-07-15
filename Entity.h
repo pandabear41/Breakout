@@ -6,6 +6,13 @@
 #include "Animation.h"
 #include "Camera.h"
 #include "Draw.h"
+#include "Defines.h"
+
+struct ColliderData {
+  int config;
+  Vector2d impact_vector;
+  //Entity *from_object;
+};
 
 enum {
 	ENTITY_TYPE_GENERIC = 0,
@@ -41,12 +48,14 @@ class Entity {
 		virtual void render(SDL_Surface* display);
 		virtual void cleanup();
 		virtual void animate();
-		virtual void collision(Entity* entity);
+		virtual bool collision(Entity* entity);
 
 		void move(float moveX, float moveY);
 
 		void stopMove();
+		bool collides(Entity* object);
 		bool collides(int oX, int oY, int oW, int oH);
+		bool circle2Rectangle(int x, int y, Entity* entity, ColliderData* data);
 	protected:
 		Animation animControl;
 		SDL_Surface* entitySurf;
